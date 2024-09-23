@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ..............................final dody page -->
+
+  <div class="finalbodypage">
+      <div class="finalstuff">
+          <img id="Trophy" src="images/celeb.svg" alt="imgg">
+      </div>
+      <div class="finalstuff">
+          <div id="aa1">HURRAY!!</div>
+          <div id="aa2" class="resultMessage">YOU WON THE GAME</div> 
+          <div id="aa3"><a href="index.html" id="playAgain"><button id="addBox" >PLAY AGAIN</button></a></div>
+      </div>
+  </div>
+
+  <div class="rulesandnext">
+      <div class="rulebook hidden">
+          <button id="cross">X</button>
+          <h1>Game Rules</h1>
+          <ul>
+            <li><span class="bullet-point"></span>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li><span class="bullet-point"></span>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+            <li><span class="bullet-point"></span>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+            <li><span class="bullet-point"></span>If both players lay down the same hand, each player lays down another hand.</li>
+          </ul>
+      </div>
+
+      <div class="container">
+          <button class="sub-box" id="togglerulebook">RULES</button>
+      </div>
+  </div>
+
+  <script>
+    const finalResultMessage = localStorage.getItem('finalWinner');
+    const resultElement = document.querySelector('.resultMessage');
+    
+    if (finalResultMessage) {
+        resultElement.textContent = finalResultMessage; 
+    }
+
+    const playAgainButton = document.getElementById('playAgain');
+    playAgainButton.addEventListener('click', function() {
+        localStorage.removeItem('usersScore');
+        localStorage.removeItem('compsScore');
+        localStorage.removeItem('finalWinner');
+    });
+
+    const addBoxButton = document.getElementById('togglerulebook');
+const hiddenBox = document.querySelector('.rulebook');
+const crossbtn = document.getElementById('cross');
+
+addBoxButton.addEventListener('click', () => {
+    hiddenBox.classList.toggle('hidden');
+});
+
+crossbtn.addEventListener('click', () => {
+    hiddenBox.classList.add('hidden');
+});
+  </script>
+
+</body>
+</html>

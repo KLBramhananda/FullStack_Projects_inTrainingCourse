@@ -1,0 +1,81 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2f3e56;
+  margin: 0;
+}
+
+.calculator {
+  background-color: #2f3e56; 
+  padding: 30px;
+  border-radius: 10px;
+  width: 280px; 
+}
+
+.calculator p { 
+  color: white;
+}
+.display {
+  background-color: #1A2236;
+  color: white;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  min-height: 40px;
+}
+
+.buttons {
+  background-color: #262e40;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn, .btndel, .btnlast, .btnlast2 {
+  background-color: #F5F7FA;
+  border: none;
+  padding: 15px; 
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #2f3e56;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+
+.btndel {
+  background-color: #506f9f;
+  color: white;
+}
+
+.btnlast {
+  background-color: #506f9f;
+  color: white;
+  grid-column: span 2; 
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.btnlast2 {
+  background-color: #E94F48;
+  color: white;
+  grid-column: span 2; 
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.btn:hover, .btn-equal:hover {
+  opacity: 0.9;
+}
+
+.btn:active, .btn-equal:active {
+  opacity: 0.7;
+}

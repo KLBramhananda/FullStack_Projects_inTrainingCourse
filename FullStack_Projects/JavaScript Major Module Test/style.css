@@ -1,0 +1,497 @@
+@font-face {
+  font-family: 'Dangrek';
+  src: url('path-to-your-font/Dangrek-Regular.woff2') format('woff2'),
+}
+
+:root {
+  --rock: url(images/hand.svg);
+  --paper: url(images/fist.svg);
+  --scissors: url(images/peace.svg);
+  --bgc: #8CC461;
+  --bx1: #FFA943;
+  --bx2: #BD00FF;
+  --bx3: #0074B6;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #3e8e4172
+}
+
+button:active {
+  background-color: #3e8e4173;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+body {
+  background-color: var(--bgc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header {
+  display: flex;
+  width: 50%;
+  padding: 1em;
+  align-self: flex-start;
+  border: 2px solid #fff;
+  border-radius: 13px;
+  position: absolute;
+  top: 50px;
+}
+
+#headbox {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headcontent {
+  display: flex;
+  align-items: center;
+}
+
+#rps p {
+  margin: 0;
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+#hbox {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  justify-content: end;
+}
+
+#hbox .score {
+  display: inline-block;
+  flex-shrink: 0;
+  background-color: #FFF;
+  border-radius: 13px;
+  width: 125px;
+  padding: 0%;
+  margin-left: 1em;
+}
+
+.hscore {
+  margin-bottom: 0;
+  text-align: center;
+  color: #656565;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.7px;
+}
+
+.hhscore {
+  margin: 0;
+  color: #252525;
+  text-align: center;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.rulesandnext {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 350px;
+  height: auto;
+  position: fixed;
+  right: 70px;
+  bottom: 25px;
+}
+
+.rulebook {
+  display: grid;
+  place-items: center;
+  height: auto;
+  width: 300px;
+  background-color: #004429;
+  color: #FFF;
+  border: 8px solid white;
+  border-radius: 5%;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.rulebook.hidden {
+  display: none;
+}
+
+.rulebook #cross {
+  font-family: 'Dangrek', sans-serif;
+  font-size: xx-large;
+  font-weight: 600;
+  color: #fff;
+  border: 4px solid white;
+  background-color: red;
+  padding: 4px 12px;
+  border-radius: 50%;
+  position: absolute;
+  right: -15px;
+  top: -25px;
+}
+
+.rulebook ul {
+  margin-top: 0;
+  padding-right: 2vw;
+}
+
+.rulebook ul li {
+  text-align: justify;
+  font-size: medium;
+  margin-bottom: 10px;
+  list-style-type: none;
+  position: relative;
+  padding-left: 30px;
+}
+
+.rulebook ul li .bullet-point {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: yellow;
+}
+
+
+
+
+.container {
+  display: flex;
+  justify-content: end;
+  width: 80%;
+}
+
+.sub-box {
+  border: 2px solid white;
+  background-color: transparent;
+  color: #fff;
+  width: 119px;
+  height: 40px;
+  border-radius: 13px;
+  font-family: Roboto;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.1px;
+  margin-left: 20px;
+}
+
+.sub-box.hidden {
+  display: none;
+}
+
+.gamebox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20REM;
+  width: 50%;
+}
+
+.mumma {
+  position: fixed;
+  display: flex;
+  justify-content: baseline;
+  width: fit-content;
+  position: relative;
+  margin-bottom: 5vh;
+  display: block;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-top: 330.4px solid rgba(0, 0, 0, 0.64);
+  position: relative;
+}
+
+.triangle1 {
+  bottom: 9.7%;
+  right: calc(10%);
+  align-self: center;
+  width: 0;
+  height: 0;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  border-top: 277.12px solid var(--bgc);
+  position: absolute;
+}
+
+button.number {
+  height: 160px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #FFF;
+}
+
+.top {
+  background: var(--rock) no-repeat center;
+  border: 18px solid var(--bx1);
+  bottom: -30px;
+  left: 30%;
+}
+
+.bottom-left {
+  background: var(--paper) no-repeat center;
+  align-self: flex-end;
+  border: 18px solid var(--bx3);
+  top: -50px;
+  left: -30px;
+}
+
+.bottom-right {
+  background: var(--scissors) no-repeat center;
+  background-size: 50px;
+  align-self: flex-end;
+  border: 18px solid var(--bx2);
+  top: -50px;
+  right: -30px;
+}
+
+.mainresbox {
+  display: none;
+  width: 100%;
+}
+
+.resultgen {
+  width: 100%;
+}
+
+.resultgenchoice {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.resultgenchoice .rc {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.7px;
+  margin: 10px 30px;
+}
+
+.circleanimate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: auto;
+  position: relative;
+}
+
+.pulse {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 28px solid transparent;
+}
+
+.pulse .main {
+  position: absolute;
+  top: 0%;
+  border: 28px solid rgb(237, 12, 8);
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: var(--rock);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.addBox.hidden {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.addBox #status {
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 39px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.9px;
+}
+
+.addBox #status1 {
+  margin-top: 10px;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 2.5px;
+}
+
+#addBox {
+  margin-top: 10px;
+  width: 174px;
+  height: 44px;
+  border-radius: 9px;
+  border-color: inherit;
+  background: #FFF;
+  color: #6B6B6B;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.5px;
+}
+
+.main.two {
+  position: absolute;
+  top: 0%;
+  border: 28px solid rgb(8, 237, 8);
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main.one {
+  left: 0%;
+}
+
+.main.two {
+  right: 0%;
+}
+
+.pulse #firstspan {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 150px;
+  height: 150px;
+  border: 28px solid green;
+  background-color: green;
+  border-radius: inherit;
+  opacity: 0.8;
+}
+
+.pulse #secondspan {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 150px;
+  height: 150px;
+  border: 28px solid green;
+  background-color: green;
+  border-radius: inherit;
+  opacity: 0.8;
+}
+
+.pulse.onepulse.animate #firstspan {
+  animation: pulseanimation 4s ease-out infinite;
+  animation-delay: calc(0.5s * var(--i));
+}
+
+.pulse.twopulse.animate #secondspan {
+  animation: pulseanimation 4s ease-out infinite;
+  animation-delay: calc(0.5s * var(--i));
+}
+
+@keyframes pulseanimation {
+  100% {
+      opacity: 0;
+      transform: scale(2);
+  }
+}
+
+.finalbodypage {
+  width: 40%;
+}
+
+.finalstuff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+#Trophy{
+margin-top: 10px;
+margin-left: -50px;
+width: 50%;
+height:50vh ;
+}
+
+#aa1 {
+  margin-bottom: 50px;
+  width: auto;
+  height: 66px;
+  flex-shrink: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 7.1px;
+}
+
+#aa2 {
+  margin-bottom: 15px;
+  color: #FFF;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 4.1px;
+}
+
+#aa3 {
+  padding: 10px;
+}
+#aa3 button{
+  font-size: x-large;
+  width: 230px;
+  height: 60px;
+  border-color: #fff;
+}

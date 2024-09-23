@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #FFCD9C;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  height: 100%;
+}
+
+.content {
+  max-width: 610px;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin: 0px;
+  color: #333;
+}
+
+.content p {
+  margin: 25px 0;
+  color: #484848;
+}
+
+.content .show{
+  color:#282828;
+}
+
+.content form{
+  display: flex;
+  margin-top: 20px;
+  
+}
+.content form input{
+  margin-right: 10px;
+}
+
+.content input[type="email"] {
+  padding: 10px;
+  flex: 1;
+  border: 2px solid #333;
+  border-radius: 5px;
+  outline: none;
+}
+
+.content button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content .disclaimer {
+  margin-top: 10px;
+  color: #f1ebeb;
+  font-size: 0.9em;
+  padding-left: 20px;
+}
+
+.image-container {
+  max-width: 400px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  text-align: left;
+   /* Creates gap at the bottom */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #333;
+  color: #fff;
+  padding: 32px 150px 42px 100px;
+  text-align: center;
+  font-size: 0.9em;
+
+}
+.footer-column{
+  text-align: left;
+}
+.footer-column1{
+  text-align: right;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+}

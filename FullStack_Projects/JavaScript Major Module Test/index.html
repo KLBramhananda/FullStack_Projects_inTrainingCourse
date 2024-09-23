@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSORS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ............................... header box -->
+    <header>
+        <div id="headbox">
+            <div class="headcontent" id="rps">
+                <p>ROCK<br>PAPER<br>SCISSORS</p>
+            </div>
+            <div class="headcontent" id="hbox">
+                <div class="score" id="scorec">
+                    <span id="scorecname">
+                        <p class="hscore">
+                            COMPUTER <br>
+                            SCORE
+                        </p>
+                        <p class="hhscore" id="scorecomp">
+                            0
+                        </p>
+                    </span>
+                </div>
+
+                <div class="score" id="scoreu">
+                    <span id="scoreuname">
+                        <p class="hscore">
+                            YOUR <br>
+                            SCORE
+                        </p>
+                        <p class="hhscore" id="scoreuser">
+                            0
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+ <!-- ...................................Game box -->
+
+    <div class="gamebox">
+        <div class="mumma hidden">
+            <div class="triangle"></div>
+            <div class="triangle1"></div>
+            <button class="number top " id="rock"></button>
+            <button class="number bottom-left" id="paper"></button>
+            <button class="number bottom-right" id="scissors"></button>
+        </div>
+        
+        <div class="mainresbox">
+            <div class="resultgen">
+                <div class="resultgenchoice">
+                    <div class="rc" id="yourchoice">YOU PICKED</div>
+                    <div class="rc" id="compchoice">PC PICKED</div>
+                </div>
+                <div class="circleanimate">
+                    <div class="pulse onepulse">
+                        <div class="main one"></div>
+                        <span id="firstspan"style="--i: 1;"></span>
+                        <span id="firstspan"style="--i: 2;"></span>
+                        <span id="firstspan"style="--i: 3;"></span>
+                    </div>
+                    <div class="addBox hidden">
+                        <div id="status"></div>
+                        <div id="status1">AGAINST PC</div>
+                        <div>
+                        <button id="addBox">PLAY AGAIN</button>
+                    </div>
+                    </div>
+                    <div class="pulse twopulse">
+                        <div class="main two"></div>
+                        <span id="secondspan"style="--i: 1;"></span>
+                        <span id="secondspan"style="--i: 2;"></span>
+                        <span id="secondspan"style="--i: 3;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ..............................final dody page -->
+
+    <div class="rulesandnext">
+        <div class="rulebook hidden">
+            <button id="cross">X</button>
+            <h1>Game Rules</h1>
+            <ul>
+              <li><span class="bullet-point"></span>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+              <li><span class="bullet-point"></span>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+              <li><span class="bullet-point"></span>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+              <li><span class="bullet-point"></span>If both players lay down the same hand, each player lays down another hand.</li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <button class="sub-box" id="togglerulebook">RULES</button>
+            <a href="final_page.html">
+                <button class="sub-box hidden">Next</button>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
